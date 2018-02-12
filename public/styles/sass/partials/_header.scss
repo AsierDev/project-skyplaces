@@ -1,0 +1,13 @@
+.hero{
+  background: url(../images/bg.jpg) no-repeat;
+  min-height:600px;
+  background-size: cover;
+  .uk-icon{
+    color: tomato;
+    &:hover{
+      color:red ;
+    }
+
+  }
+
+}

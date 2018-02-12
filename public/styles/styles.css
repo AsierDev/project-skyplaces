@@ -117,7 +117,9 @@ a,
 .uk-link {
   color: #E91E63;
   text-decoration: none;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
 
 a:hover,
 .uk-link:hover {
@@ -9961,6 +9963,12 @@ iframe.uk-cover {
 /*---------------------------------------------
 Partials
 ___________________________________________*/
-.uk-input {
-  height: 45px; }
+.hero {
+  background: url(../images/bg.jpg) no-repeat;
+  min-height: 600px;
+  background-size: cover; }
+  .hero .uk-icon {
+    color: tomato; }
+    .hero .uk-icon:hover {
+      color: red; }
 /*# sourceMappingURL=styles.css.map */
