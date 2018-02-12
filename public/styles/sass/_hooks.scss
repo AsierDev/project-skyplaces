@@ -23,7 +23,9 @@ abbr[title] {
 // Links
 // ========================================================================
 
-@mixin hook-base-link(){}
+@mixin hook-base-link(){
+  @include transition();
+}
 
 @mixin hook-base-link-hover(){}
 
