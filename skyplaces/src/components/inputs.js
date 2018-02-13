@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 
 class Inputs extends Component {
     constructor() {
@@ -10,10 +10,10 @@ class Inputs extends Component {
         }
     }
 
-    keepInput = inputLocation => this.setState({ inputLocation })
+    keepInput = inputLocation => this.setState({inputLocation})
 
     handleChange = e => {
-        this.setState({ inputType: e.target.value });
+        this.setState({inputType: e.target.value});
     }
 
     submit = () => {
@@ -21,15 +21,26 @@ class Inputs extends Component {
         this.props.onSubmitLocation(this.state.inputLocation)
         this.props.onSubmitType(this.state.inputType)
 
-        this.setState({ inputLocations: '' })
+
+        this.setState({inputLocations: ''})
 
     }
 
     render() {
-        return <form className="uk-grid-small " data-uk-grid onSubmit={e => { e.preventDefault(); this.submit() }}>
+        return <form className="uk-grid-small "
+                     data-uk-grid
+                     onSubmit={e => {
+                         e.preventDefault();
+                         this.submit()
+                         this.props.onSearchPlaces(`restaurants+${this.state.inputType}+${this.state.inputLocation}`)
+                     }}>
             <div className="uk-width-1-2@m">
                 <label htmlFor="select-food">Que quieres comer?</label>
-                <select name className="uk-select" id="select-food" value={this.state.value} onChange={this.handleChange}>
+                <select name
+                        className="uk-select"
+                        id="select-food"
+                        value={this.state.value}
+                        onChange={this.handleChange}>
                     <option>ver todos los restaurantes</option>
                     <option value="chino">chino</option>
                     <option value="tapas">tapas</option>
@@ -44,7 +55,11 @@ class Inputs extends Component {
 
             <div className="uk-width-1-2@m">
                 <label htmlFor="choose-place">Donde?</label>
-                <input type="text" id="choose-place" className="uk-input" placeholder="Indica ciudad o barrio" onChange={(e) => this.keepInput(e.target.value)} />
+                <input type="text"
+                       id="choose-place"
+                       className="uk-input"
+                       placeholder="Indica ciudad o barrio"
+                       onChange={(e) => this.keepInput(e.target.value)}/>
             </div>
         </form>
     }
