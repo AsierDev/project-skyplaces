@@ -34,6 +34,8 @@ Si nos da tiempo tenemos pensado implementar distintas opciones de filtrado en l
 
 Puedes ver una demo en surge (TBD)
 
+[Link a Trello](https://trello.com/b/LgrI7H4j/team-planning)
+
 ## Built With
 
 * [React](https://reactjs.org/) - A JavaScript library for building user interfaces
