@@ -10,6 +10,7 @@ let placesApi;
   'use strict';
 
   let places
+  let details
 
   const init = () => {
     return new Promise((resolve, reject) => {
@@ -44,7 +45,12 @@ let placesApi;
     search: query => new Promise((resolve, reject) =>
       places.textSearch({ query }, (results, status) =>
         status === google.maps.places.PlacesServiceStatus.OK ? resolve(results) : reject(Error(`places returned status ${status}`))
-      ))
+      )),
+
+    getDetails: placeId => new Promise((resolve, reject) =>
+      places.getDetails({ placeId }, (results, status) =>
+        status === google.maps.places.PlacesServiceStatus.OK ? resolve(results) : reject(Error(`places returned status ${status}`))
+    ))
   }
 
   placesApi = inst

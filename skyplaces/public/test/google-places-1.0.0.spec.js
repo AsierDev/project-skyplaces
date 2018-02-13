@@ -17,7 +17,6 @@ describe('Google Places client', () => {
         .then(() => target.search('restaurante gracia'))
         .then(_places => {
           places = _places
-
           done()
         })
         .catch(done)
@@ -29,4 +28,24 @@ describe('Google Places client', () => {
       expect(places.length > 0).toBeTruthy()
     })
   })
+
+  describe('get details', () => {
+    let details 
+
+    beforeEach(done => {
+      target.init()
+        .then(() => target.getDetails('ChIJIeC2ck6rWg0R9mV9KQvNnBY'))
+        .then(_details => {
+          details = _details
+
+          done()
+        })
+        .catch(done)
+    })
+
+    it('should get results on search', () => {
+      expect(details).not.toBeUndefined()
+    })
+  })
+
 })
