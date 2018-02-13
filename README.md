@@ -16,6 +16,19 @@ npm run start o yarn start //
 ```
 
 
+## Functions
+
+La app consiste de un buscador donde puedes seleccionar el tipo de restaurante que buscas y la ciudad o localidad. Una vez elegidos estos parametros se devolverá un grid de resultados.
+
+![screenshot](design/imagen-landing.png)
+
+Cuando seleccionas un restaurante se abrira un modal con la ficha del lugar (fotos, dirección, horarios, etc) 
+
+(TO DO IMAGEN)
+
+Si nos da tiempo tenemos pensado implementar distintas opciones de filtrado en la busqueda (mostrar solo restaurantes abiertos ahora) y añadir lugares a favoritos.
+
+
 
 ## Deployment
 
