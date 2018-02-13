@@ -1,0 +1,15 @@
+{
+  "title": "Google Places client based on Google Places client API lib",
+  "description": "Abstraction component of Google Places client implemented on Google Places client API lib.",
+  "tags": [
+    "google",
+    "places",
+    "api",
+    "js",
+    "es6",
+    "ajax",
+    "client",
+    "component"
+  ],
+  "created": "2018-02-12T16:02:49.314Z"
+}
