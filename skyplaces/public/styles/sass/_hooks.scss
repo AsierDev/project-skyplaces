@@ -1,0 +1,212 @@
+/*-----------------------------------------------------------
+	BASE
+/*------------------------------------------------------------*/
+// Body
+// ========================================================================
+
+@mixin hook-base-body(){
+
+  background: $white;
+  box-sizing: border-box;
+
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none !important;
+}
+
+
+.uk-height-xlarge {
+  height: 700px;
+}
+// Links
+// ========================================================================
+
+@mixin hook-base-link(){
+  @include transition();
+}
+
+@mixin hook-base-link-hover(){}
+
+
+
+// Headings
+// ========================================================================
+
+@mixin hook-base-heading(){
+  a{
+    color:$global-color;
+  }
+}
+
+@mixin hook-base-h1(){
+
+}
+
+@mixin hook-base-h2(){}
+
+@mixin hook-base-h3(){}
+
+@mixin hook-base-h4(){}
+
+@mixin hook-base-h5(){}
+
+@mixin hook-base-h6(){}
+
+
+// Horizontal rules
+// ========================================================================
+
+@mixin hook-base-hr(){}
+
+
+// Blockquotes
+// ========================================================================
+@mixin hook-base-blockquote(){
+  color: $global-color;
+}
+@mixin hook-base-blockquote-footer(){
+
+  color: $base-blockquote-footer-color;
+
+  &::before { content: "— "; }
+
+}
+
+
+
+/*-----------------------------------------------------------
+	BUTTONS
+/*------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+  @extend .uk-button;
+  @extend .uk-button-default;
+
+}
+
+
+@mixin hook-button(){
+  text-transform: $button-text-transform;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  -webkit-transition-property: color, background-color, border-color;
+  transition-property: color, background-color, border-color;
+  font-weight:bold;
+  letter-spacing: 1px;
+  border-radius: $global-border-radius;
+}
+@mixin hook-button-hover(){
+
+}
+@mixin hook-button-focus(){}
+@mixin hook-button-active(){}
+@mixin hook-button-default(){
+  border: 2px solid $black;
+}
+@mixin hook-button-default-hover(){
+  border-color: $button-default-hover-border; }
+@mixin hook-button-default-active(){ border-color: $button-default-active-border;
+  background: $black;
+}
+@mixin hook-button-primary(){
+  background:  $primary-color;
+  color: $white;
+  line-height: 44px;
+}
+@mixin hook-button-primary-hover(){
+  background:  darken($primary-color, 10%);
+}
+@mixin hook-button-primary-active(){}
+@mixin hook-button-secondary(){
+  background:  $secondary-color;
+  color: $white;
+  line-height: 44px;
+}
+@mixin hook-button-secondary-hover(){
+  background:  lighten($secondary-color, 10%);
+}
+@mixin hook-button-secondary-active(){}
+@mixin hook-button-danger(){ border: $button-border-width solid transparent; }
+@mixin hook-button-danger-hover(){}
+@mixin hook-button-danger-active(){}
+@mixin hook-button-disabled(){ border-color: $button-disabled-border; }
+@mixin hook-button-small(){}
+@mixin hook-button-large(){}
+@mixin hook-button-text(){
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    border-bottom: $button-text-border-width solid $button-text-border;
+    -webkit-transition: right 0.3s ease-out;
+    transition: right 0.3s ease-out;
+  }
+
+}
+@mixin hook-button-text-hover(){
+
+  &::before { right: 0; }
+
+}
+@mixin hook-button-text-disabled(){
+
+  &::before { display: none; }
+
+}
+@mixin hook-button-link(){}
+@mixin hook-button-misc(){}
+
+@mixin hook-inverse-component-button(){
+  .uk-button-primary {
+    background-color: $primary-color;
+    color: $white;
+  }
+  .uk-button-default{
+    border-color: $white;
+    &:hover{
+      background: $white;
+      color:$black;
+    }
+  }
+}
+
+
+/*-----------------------------------------------------------
+	FORMS
+/*------------------------------------------------------------*/
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid $global-border;
+  color: $dark-gray;
+  background-color: $white;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+
+
+/* ## Search Form
+--------------------------------------------- */
+
+.search-form {
+  overflow: hidden;
+}
+
+
+
+
+
+

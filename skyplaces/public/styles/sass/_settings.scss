@@ -1,0 +1,301 @@
+//
+// Component:       Variables
+// Description:     Defines common values which are used across all components
+//
+// ========================================================================
+// Palette
+// ========================================================================
+$white: #fff;
+$black: #000;
+$light: #f5f5f5;
+$gray: #777;
+$light-gray: #DDD;
+$medium-gray: #999;
+$dark-gray: #333;
+$muted-color: #f5f5f5;
+$primary-color: tomato;
+$secondary-color: #2D3047;
+$bg-color: $white;
+$bg-darken-color: darken($bg-color, 3%);
+$accent-color: $primary-color;
+// Breakpoints
+// ========================================================================
+// Phone Portrait:   Galaxy (360x640), iPhone 6 (375x667), iPhone 6+ (414x736)
+// Phone Landscape:  Galaxy (640x360), iPhone 6 (667x375), iPhone 6+ (736x414)
+// Tablet Portrait:  iPad (768x1024), Galaxy Tab (800x1280),
+// Tablet Landscape: iPad (1024x768), iPad Pro (1024x1366),
+// Desktop:          Galaxy Tab (1280x800), iPad Pro (1366x1024)
+$max-width: 1200px;
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1240px;
+$breakpoint-small: $mobile;
+$breakpoint-medium: $tablet;
+$breakpoint-large: $laptop;
+$breakpoint-xlarge: $desktop;
+$breakpoint-xsmall-max: ($breakpoint-small - 1);
+$breakpoint-small-max: ($breakpoint-medium - 1);
+$breakpoint-medium-max: ($breakpoint-large - 1);
+$breakpoint-large-max: ($breakpoint-xlarge - 1);
+// Global variables
+// ========================================================================
+//
+// Typography
+//
+$sans-serif: helvetica,
+arial;
+$serif: georgia;
+$global-font-family: 'Raleway',
+sans-serif;
+$global-heading-font-family: 'Raleway',
+sans-serif;
+$baseFontSize: 18;
+$global-font-size: 18px;
+$global-line-height: 1.66;
+$global-xxlarge-font-size: rem(42); //h1
+$global-xlarge-font-size: rem(32); //h2
+$global-large-font-size: rem(24); //h3
+$global-medium-font-size: rem(20); //h4
+$global-small-font-size: rem(12); //h6
+//
+// Colors
+//
+$global-color: $dark-gray;
+$global-emphasis-color: $accent-color;
+$global-muted-color: $medium-gray;
+$global-link-color: $accent-color;
+$global-link-hover-color: darken($accent-color, 15%);
+$global-inverse-color: $white;
+$inverse-global-muted-color: rgba($global-inverse-color, 0.5);
+$inverse-global-inverse-color: $global-color;
+$inverse-global-color: rgba($global-inverse-color, 0.8);
+$inverse-global-emphasis-color: $global-inverse-color;
+$inverse-global-border: rgba($global-inverse-color, 0.2);
+$inverse-global-muted-background: rgba($global-inverse-color, 0.1);
+//
+// Backgrounds
+//
+$global-background: $white;
+$global-muted-background: $muted-color;
+$global-primary-background: $primary-color;
+$global-secondary-background: $secondary-color;
+$global-success-background: #32d296;
+$global-warning-background: #faa05a;
+$global-danger-background: $accent-color;
+$inverse-global-primary-background: $global-inverse-color;
+//
+// Borders
+//
+$global-border-width: 1px;
+$global-border: $light-gray;
+$global-border-radius: 3px;
+//
+// Box-Shadows
+//
+$global-small-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+$global-medium-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+$global-large-box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+$global-xlarge-box-shadow: 0 28px 50px rgba(0, 0, 0, 0.16);
+$global-text-shadow: 1px 1px 1px rgba($black, 1);
+.uk-text-shadow {
+    text-shadow: $global-text-shadow;
+}
+
+//
+// Spacings
+//
+// Used in margin, section, list
+$global-margin: 20px;
+$global-small-margin: $global-margin/2;
+$global-medium-margin: $global-margin * 2;
+$global-large-margin: $global-margin * 3.5;
+$global-xlarge-margin: $global-large-margin * 2;
+// Used in grid, column, container, align, card, padding
+$global-gutter: 30px;
+$global-small-gutter: 15px;
+$global-medium-gutter: 40px;
+$global-large-gutter: 70px;
+//Width
+$width-small-width : 150px;
+$width-medium-width : 300px;
+$width-large-width : 450px;
+$width-xlarge-width : 600px;
+$width-xxlarge-width : 750px;
+//Height
+$height-small-height: 150px;
+$height-medium-height: 300px;
+$height-large-height: 450px;
+$height-xlarge-height: 600px;
+$height-xxlarge-height: 800px;
+.uk-height-xlarge {
+    height: $height-xlarge-height;
+}
+
+.uk-height-max-xlarge {
+    max-height: $height-xlarge-height;
+}
+
+.uk-height-xxlarge {
+    height: $height-xxlarge-height;
+}
+
+.uk-height-max-xxlarge {
+    max-height: $height-xxlarge-height;
+}
+
+//
+// Controls
+//
+$global-control-height: 40px;
+$global-control-small-height: 30px;
+$global-control-large-height: 55px;
+//
+// Z-index
+//
+$global-z-index: 1000;
+//Containers
+$container-max-width : $max-width;
+$container-xsmall-max-width : 750px;
+$container-small-max-width : 900px;
+$container-large-max-width : 1600px;
+$container-padding-horizontal : 15px;
+$container-padding-horizontal-s : $global-gutter;
+$container-padding-horizontal-m : $global-medium-gutter;
+$button-default-color: $global-color;
+$alert-padding: $global-small-gutter;
+
+/*-----------------------------------------------------------
+	BASE
+/*------------------------------------------------------------*/
+
+$base-body-background : $global-background;
+$base-body-font-family : $global-font-family;
+$base-body-font-weight : normal;
+$base-body-font-size : $global-font-size;
+$base-body-line-height : $global-line-height;
+$base-body-color : $global-color;
+$base-link-color : $global-link-color;
+$base-link-text-decoration : none;
+$base-link-hover-color : $global-link-hover-color;
+$base-link-hover-text-decoration : none;
+$base-code-font-size : $global-small-font-size;
+$base-code-font-family : Consolas,
+monaco,
+monospace;
+$base-code-color : $global-danger-background;
+$base-em-color : $global-danger-background;
+$base-ins-background : lighten($accent-color, 30%);
+$base-ins-color : $global-color;
+$base-mark-background : lighten($accent-color, 10%);
+$base-mark-color : $global-color;
+$base-quote-font-style : italic;
+$base-small-font-size : 80%;
+$base-margin-vertical : $global-margin;
+$base-heading-font-family : $global-heading-font-family;
+$base-heading-font-weight : normal;
+$base-heading-color : $global-color;
+$base-heading-text-transform : none;
+$base-heading-margin-top : $global-medium-margin;
+$base-h1-font-size : $global-xxlarge-font-size;
+$base-h1-line-height : 1.2;
+$base-h2-font-size : $global-xlarge-font-size;
+$base-h2-line-height : 1.3;
+$base-h3-font-size : $global-large-font-size;
+$base-h3-line-height : 1.4;
+$base-h4-font-size : $global-medium-font-size;
+$base-h4-line-height : 1.4;
+$base-h5-font-size : $global-font-size;
+$base-h5-line-height : 1.4;
+$base-h6-font-size : $global-small-font-size;
+$base-h6-line-height : 1.4;
+$base-list-padding-left : 0;
+$base-hr-margin-vertical : $global-margin;
+$base-hr-border-width : $global-border-width;
+$base-hr-border : $global-border;
+$base-blockquote-font-size : $global-medium-font-size;
+$base-blockquote-line-height : 1.5;
+$base-blockquote-font-style : italic;
+$base-blockquote-margin-vertical : $global-margin;
+$base-blockquote-footer-margin-top : $global-small-margin;
+$base-blockquote-footer-font-size : $global-small-font-size;
+$base-blockquote-footer-line-height : 1.5;
+$base-pre-font-size : $global-small-font-size;
+$base-pre-line-height : 1.5;
+$base-pre-font-family : $base-code-font-family;
+$base-pre-color : $global-color;
+$base-selection-background : $accent-color;
+$base-selection-color : $global-inverse-color;
+
+/*-----------------------------------------------------------
+	OVERLAY
+/*------------------------------------------------------------*/
+
+$overlay-default-background: rgba(255, 255, 255, .95);
+$overlay-primary-background: rgba($primary-color, .9);
+$overlay-dark-background: rgba($black, .9);
+$overlay-secondary-background: rgba($secondary-color, .95);
+.uk-overlay-dark {
+    background: $overlay-dark-background;
+}
+
+.uk-overlay-secondary {
+    background: $overlay-secondary-background;
+}
+
+.uk-overlay-gradient {
+    background: linear-gradient(135deg, rgba($primary-color, .8) 10%, rgba($secondary-color, .8) 80%);
+}
+
+
+/*-----------------------------------------------------------
+	BUTTONS
+/*------------------------------------------------------------*/
+
+//Variables
+$button-line-height: 40px;
+$button-small-line-height: 30px;
+$button-large-line-height: 50px;
+$button-font-size: 12px;
+$button-small-font-size: $global-small-font-size;
+$button-large-font-size: $global-medium-font-size;
+$button-padding-horizontal: $global-gutter;
+$button-small-padding-horizontal: $global-small-gutter;
+$button-large-padding-horizontal: $global-medium-gutter;
+$button-default-background: transparent;
+$button-default-color: $black;
+$button-default-hover-background: $black;
+$button-default-hover-color: $white;
+$button-default-active-background: $black;
+$button-default-active-color: $white;
+$button-primary-background: transparent;
+$button-primary-color: $primary-color;
+$button-primary-hover-background: $primary-color;
+$button-primary-hover-color: $white;
+$button-primary-active-background: $primary-color;
+$button-primary-active-color: $white;
+$button-secondary-background: $global-secondary-background;
+$button-secondary-color: $global-inverse-color;
+$button-secondary-hover-background: darken($button-secondary-background, 5%);
+$button-secondary-hover-color: $global-inverse-color;
+$button-secondary-active-background: darken($button-secondary-background, 10%);
+$button-secondary-active-color: $global-inverse-color;
+$button-disabled-background: $global-muted-background;
+$button-disabled-color: $global-muted-color;
+$button-text-line-height: 30px;
+$button-text-color: $global-color;
+$button-text-hover-color: $primary-color;
+$button-text-disabled-color: $global-muted-color;
+$button-link-line-height: $global-line-height;
+$button-link-color: $global-link-color;
+$button-link-hover-color: $global-link-hover-color;
+$button-link-hover-text-decoration: underline;
+$button-link-disabled-color: $global-muted-color;
+$button-text-transform : uppercase;
+$button-border-width : 2px;
+$button-default-border : $black;
+$button-default-hover-border : $black;
+$button-default-active-border : $black;
+$button-disabled-border : $global-border;
+$button-text-border-width : $global-border-width;
+$button-text-border : $button-text-hover-color;
