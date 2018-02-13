@@ -27,8 +27,8 @@
   background: rgba(45, 48, 71, 0.95); }
 
 .uk-overlay-gradient {
-  background: -webkit-linear-gradient(315deg, rgba(233, 30, 99, 0.8) 10%, rgba(45, 48, 71, 0.8) 80%);
-  background: linear-gradient(135deg, rgba(233, 30, 99, 0.8) 10%, rgba(45, 48, 71, 0.8) 80%); }
+  background: -webkit-linear-gradient(315deg, rgba(255, 99, 71, 0.8) 10%, rgba(45, 48, 71, 0.8) 80%);
+  background: linear-gradient(135deg, rgba(255, 99, 71, 0.8) 10%, rgba(45, 48, 71, 0.8) 80%); }
 
 /*-----------------------------------------------------------
 	BUTTONS
@@ -115,7 +115,7 @@ a:hover {
  */
 a,
 .uk-link {
-  color: #E91E63;
+  color: tomato;
   text-decoration: none;
   cursor: pointer;
   -webkit-transition: all 0.4s ease-in-out;
@@ -123,7 +123,7 @@ a,
 
 a:hover,
 .uk-link:hover {
-  color: #aa1145;
+  color: #fa2600;
   text-decoration: none; }
 
 /* Text-level semantics
@@ -160,7 +160,7 @@ strong {
   /* 2 */
   font-family: Consolas, monaco, monospace;
   /* 3 */
-  color: #E91E63;
+  color: tomato;
   white-space: nowrap;
   padding: 2px 6px;
   background: #f5f5f5; }
@@ -169,13 +169,13 @@ strong {
  * Emphasize
  */
 em {
-  color: #E91E63; }
+  color: tomato; }
 
 /*
  * Insert
  */
 ins {
-  background: #f7a9c4;
+  background: #ffe5e0;
   color: #333;
   text-decoration: none; }
 
@@ -183,7 +183,7 @@ ins {
  * Mark
  */
 mark {
-  background: #ee4c83;
+  background: #ff8e7a;
   color: #333; }
 
 /*
@@ -439,12 +439,12 @@ pre code {
 /* Selection pseudo-element
  ========================================================================== */
 ::-moz-selection {
-  background: #E91E63;
+  background: tomato;
   color: #fff;
   text-shadow: none; }
 
 ::selection {
-  background: #E91E63;
+  background: tomato;
   color: #fff;
   text-shadow: none; }
 
@@ -547,7 +547,7 @@ a.uk-link-heading:not(:hover),
 
 a.uk-link-heading:hover,
 .uk-link-heading a:hover {
-  color: #E91E63;
+  color: tomato;
   text-decoration: none; }
 
 /* Reset
@@ -836,7 +836,7 @@ a.uk-link-reset:hover,
  * Term
  */
 .uk-description-list > dt {
-  color: #E91E63;
+  color: tomato;
   font-size: 0.6666666667rem;
   font-weight: normal;
   text-transform: uppercase; }
@@ -1475,7 +1475,7 @@ button.uk-icon:not(:disabled) {
   outline: none;
   background-color: #fff;
   color: #333;
-  border-color: #E91E63; }
+  border-color: tomato; }
 
 /* Disabled */
 .uk-input:disabled,
@@ -1549,8 +1549,8 @@ button.uk-icon:not(:disabled) {
  */
 .uk-form-danger,
 .uk-form-danger:focus {
-  color: #E91E63;
-  border-color: #E91E63; }
+  color: tomato;
+  border-color: tomato; }
 
 /*
  * Success
@@ -1662,7 +1662,7 @@ select.uk-form-width-xsmall {
 .uk-radio:focus,
 .uk-checkbox:focus {
   outline: none;
-  border-color: #E91E63; }
+  border-color: tomato; }
 
 /*
  * Checked
@@ -1670,14 +1670,14 @@ select.uk-form-width-xsmall {
 .uk-radio:checked,
 .uk-checkbox:checked,
 .uk-checkbox:indeterminate {
-  background-color: #E91E63;
+  background-color: tomato;
   border-color: transparent; }
 
 /* Focus */
 .uk-radio:checked:focus,
 .uk-checkbox:checked:focus,
 .uk-checkbox:indeterminate:focus {
-  background-color: #c1134e; }
+  background-color: #ff3814; }
 
 /*
  * Icons
@@ -1779,7 +1779,7 @@ select.uk-form-width-xsmall {
 /* Label
  ========================================================================== */
 .uk-form-label {
-  color: #E91E63;
+  color: tomato;
   font-size: 0.6666666667rem; }
 
 /* Layout
@@ -2016,22 +2016,22 @@ input.uk-active[type="submit"],
  */
 .uk-button-primary {
   background-color: transparent;
-  color: #E91E63;
-  background: #E91E63;
+  color: tomato;
+  background: tomato;
   color: #fff;
   line-height: 44px; }
 
 /* Hover + Focus */
 .uk-button-primary:hover,
 .uk-button-primary:focus {
-  background-color: #E91E63;
+  background-color: tomato;
   color: #fff;
-  background: #c1134e; }
+  background: #ff3814; }
 
 /* OnClick + Active */
 .uk-button-primary:active,
 .uk-button-primary.uk-active {
-  background-color: #E91E63;
+  background-color: tomato;
   color: #fff; }
 
 /*
@@ -2061,20 +2061,20 @@ input.uk-active[type="submit"],
  * Danger
  */
 .uk-button-danger {
-  background-color: #E91E63;
+  background-color: tomato;
   color: #fff;
   border: 2px solid transparent; }
 
 /* Hover + Focus */
 .uk-button-danger:hover,
 .uk-button-danger:focus {
-  background-color: #d81558;
+  background-color: #ff4d2e;
   color: #fff; }
 
 /* OnClick + Active */
 .uk-button-danger:active,
 .uk-button-danger.uk-active {
-  background-color: #c1134e;
+  background-color: #ff3814;
   color: #fff; }
 
 /*
@@ -2126,14 +2126,14 @@ input[type="submit"]:disabled,
     bottom: 0;
     left: 0;
     right: 100%;
-    border-bottom: 1px solid #E91E63;
+    border-bottom: 1px solid tomato;
     -webkit-transition: right 0.3s ease-out;
     transition: right 0.3s ease-out; }
 
 /* Hover + Focus */
 .uk-button-text:hover,
 .uk-button-text:focus {
-  color: #E91E63; }
+  color: tomato; }
   .uk-button-text:hover::before,
   .uk-button-text:focus::before {
     right: 0; }
@@ -2155,12 +2155,12 @@ input[type="submit"]:disabled,
   line-height: 1.66;
   background: none;
   /* 2 */
-  color: #E91E63; }
+  color: tomato; }
 
 /* Hover + Focus */
 .uk-button-link:hover,
 .uk-button-link:focus {
-  color: #aa1145;
+  color: #fa2600;
   text-decoration: underline; }
 
 /* Disabled */
@@ -2281,7 +2281,7 @@ input[type="submit"]:disabled,
  * Primary
  */
 .uk-section-primary {
-  background: #E91E63; }
+  background: tomato; }
 
 /*
  * Secondary
@@ -2768,7 +2768,7 @@ input[type="submit"]:disabled,
  * Primary
  */
 .uk-tile-primary {
-  background: #E91E63; }
+  background: tomato; }
 
 /*
  * Secondary
@@ -2874,7 +2874,7 @@ input[type="submit"]:disabled,
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); }
 
 .uk-card-default .uk-card-title {
-  color: #E91E63; }
+  color: tomato; }
 
 .uk-card-default.uk-card-hover:hover {
   background-color: #fff;
@@ -2890,7 +2890,7 @@ input[type="submit"]:disabled,
  * Primary
  */
 .uk-card-primary {
-  background: #E91E63;
+  background: tomato;
   color: #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); }
 
@@ -2898,7 +2898,7 @@ input[type="submit"]:disabled,
   color: #fff; }
 
 .uk-card-primary.uk-card-hover:hover {
-  background-color: #E91E63;
+  background-color: tomato;
   box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16); }
 
 /*
@@ -3108,7 +3108,7 @@ input[type="submit"]:disabled,
 
 /* OnClick */
 .uk-totop:active {
-  color: #E91E63; }
+  color: tomato; }
 
 /* ========================================================================
    Component: Marker
@@ -3178,8 +3178,8 @@ input[type="submit"]:disabled,
  * Primary
  */
 .uk-alert-primary {
-  background: #fbd5e2;
-  color: #E91E63; }
+  background: #fff8f7;
+  color: tomato; }
 
 /*
  * Success
@@ -3199,8 +3199,8 @@ input[type="submit"]:disabled,
  * Danger
  */
 .uk-alert-danger {
-  background: #fbd5e2;
-  color: #E91E63; }
+  background: #fff8f7;
+  color: tomato; }
 
 /*
      * Content
@@ -3236,7 +3236,7 @@ input[type="submit"]:disabled,
   border-radius: 500px;
   vertical-align: middle;
   /* 1 */
-  background: #E91E63;
+  background: tomato;
   color: #fff;
   font-size: 0.6666666667rem;
   /* 2 */
@@ -3268,7 +3268,7 @@ input[type="submit"]:disabled,
 .uk-label {
   display: inline-block;
   padding: 0 10px;
-  background: #E91E63;
+  background: tomato;
   line-height: 1.66;
   font-size: 0.6666666667rem;
   color: #fff;
@@ -3297,7 +3297,7 @@ input[type="submit"]:disabled,
  * Danger
  */
 .uk-label-danger {
-  background-color: #E91E63;
+  background-color: tomato;
   color: #fff; }
 
 /* ========================================================================
@@ -3326,7 +3326,7 @@ input[type="submit"]:disabled,
  * Primary
  */
 .uk-overlay-primary {
-  background: rgba(233, 30, 99, 0.9); }
+  background: rgba(255, 99, 71, 0.9); }
 
 /* ========================================================================
    Component: Article
@@ -3777,13 +3777,13 @@ ul.uk-nav-sub {
 
 /* Active */
 .uk-nav-default > li.uk-active > a {
-  color: #E91E63; }
+  color: tomato; }
 
 /*
  * Header
  */
 .uk-nav-default .uk-nav-header {
-  color: #E91E63; }
+  color: tomato; }
 
 /*
  * Divider
@@ -3818,13 +3818,13 @@ ul.uk-nav-sub {
 
 /* Active */
 .uk-nav-primary > li.uk-active > a {
-  color: #E91E63; }
+  color: tomato; }
 
 /*
  * Header
  */
 .uk-nav-primary .uk-nav-header {
-  color: #E91E63; }
+  color: tomato; }
 
 /*
  * Divider
@@ -4034,11 +4034,11 @@ ul.uk-nav-sub {
 
 /* OnClick */
 .uk-navbar-nav > li > a:active {
-  color: #E91E63; }
+  color: tomato; }
 
 /* Active */
 .uk-navbar-nav > li.uk-active > a {
-  color: #E91E63; }
+  color: tomato; }
 
 /* Item
  ========================================================================== */
@@ -4174,13 +4174,13 @@ ul.uk-nav-sub {
 
 /* Active */
 .uk-navbar-dropdown-nav > li.uk-active > a {
-  color: #E91E63; }
+  color: tomato; }
 
 /*
  * Header
  */
 .uk-navbar-dropdown-nav .uk-nav-header {
-  color: #E91E63; }
+  color: tomato; }
 
 /*
  * Divider
@@ -4314,7 +4314,7 @@ ul.uk-nav-sub {
 
 /* Active */
 .uk-subnav > .uk-active > a {
-  color: #E91E63; }
+  color: tomato; }
 
 /* Divider modifier
  ========================================================================== */
@@ -4363,7 +4363,7 @@ ul.uk-nav-sub {
 
 /* Active */
 .uk-subnav-pill > .uk-active > a {
-  background-color: #E91E63;
+  background-color: tomato;
   color: #fff; }
 
 /* Disabled
@@ -4571,8 +4571,8 @@ ul.uk-nav-sub {
 
 /* Active */
 .uk-tab > .uk-active > a {
-  color: #E91E63;
-  border-color: #E91E63; }
+  color: tomato;
+  border-color: tomato; }
 
 /* Disabled */
 .uk-tab > .uk-disabled > a {
@@ -4889,7 +4889,7 @@ ul.uk-nav-sub {
   display: block;
   font-size: 1.1111111111rem;
   line-height: 1.4;
-  color: #E91E63;
+  color: tomato;
   overflow: hidden; }
   .uk-accordion-title::after {
     content: "";
@@ -5024,7 +5024,7 @@ ul.uk-nav-sub {
  * Header
  */
 .uk-dropdown-nav .uk-nav-header {
-  color: #E91E63; }
+  color: tomato; }
 
 /*
  * Divider
@@ -6000,7 +6000,7 @@ ul.uk-nav-sub {
  * Primary
  */
 .uk-notification-message-primary {
-  color: #E91E63; }
+  color: tomato; }
 
 /*
  * Success
@@ -6018,7 +6018,7 @@ ul.uk-nav-sub {
  * Danger
  */
 .uk-notification-message-danger {
-  color: #E91E63; }
+  color: tomato; }
 
 /* ========================================================================
    Component: Tooltip
@@ -6138,15 +6138,15 @@ ul.uk-nav-sub {
  * 1. Remove right border in IE11 and Edge
  */
 .uk-progress::-webkit-progress-value {
-  background-color: #E91E63;
+  background-color: tomato;
   -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease; }
 
 .uk-progress::-moz-progress-bar {
-  background-color: #E91E63; }
+  background-color: tomato; }
 
 .uk-progress::-ms-fill {
-  background-color: #E91E63;
+  background-color: tomato;
   -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease;
   /* 1 */
@@ -7271,7 +7271,7 @@ ul.uk-nav-sub {
 .uk-text-lead {
   font-size: 1.3333333333rem;
   line-height: 1.5;
-  color: #E91E63; }
+  color: tomato; }
 
 .uk-text-meta {
   font-size: 0.6666666667rem;
@@ -7315,7 +7315,7 @@ ul.uk-nav-sub {
   color: #999 !important; }
 
 .uk-text-primary {
-  color: #E91E63 !important; }
+  color: tomato !important; }
 
 .uk-text-success {
   color: #32d296 !important; }
@@ -7324,7 +7324,7 @@ ul.uk-nav-sub {
   color: #faa05a !important; }
 
 .uk-text-danger {
-  color: #E91E63 !important; }
+  color: tomato !important; }
 
 /* Background modifier
  ========================================================================== */
@@ -7341,11 +7341,11 @@ ul.uk-nav-sub {
   /* 2 */
   display: inline-block;
   /* 3 */
-  color: #E91E63 !important; }
+  color: tomato !important; }
 
 @supports (-webkit-background-clip: text) {
   .uk-text-background {
-    background-color: #E91E63; } }
+    background-color: tomato; } }
 
 /* Alignment modifiers
  ========================================================================== */
@@ -7678,7 +7678,7 @@ iframe.uk-cover {
   background-color: #f5f5f5; }
 
 .uk-background-primary {
-  background-color: #E91E63; }
+  background-color: tomato; }
 
 .uk-background-secondary {
   background-color: #2D3047; }
@@ -9613,7 +9613,7 @@ iframe.uk-cover {
   .uk-light .uk-form-label, .uk-section-primary:not(.uk-preserve-color) .uk-form-label, .uk-section-secondary:not(.uk-preserve-color) .uk-form-label, .uk-tile-primary:not(.uk-preserve-color) .uk-form-label, .uk-tile-secondary:not(.uk-preserve-color) .uk-form-label, .uk-card-primary.uk-card-body .uk-form-label, .uk-card-primary > :not([class*='uk-card-media']) .uk-form-label, .uk-card-secondary.uk-card-body .uk-form-label, .uk-card-secondary > :not([class*='uk-card-media']) .uk-form-label, .uk-overlay-primary .uk-form-label, .uk-offcanvas-bar .uk-form-label {
     color: #fff; }
   .uk-light .uk-button-primary, .uk-section-primary:not(.uk-preserve-color) .uk-button-primary, .uk-section-secondary:not(.uk-preserve-color) .uk-button-primary, .uk-tile-primary:not(.uk-preserve-color) .uk-button-primary, .uk-tile-secondary:not(.uk-preserve-color) .uk-button-primary, .uk-card-primary.uk-card-body .uk-button-primary, .uk-card-primary > :not([class*='uk-card-media']) .uk-button-primary, .uk-card-secondary.uk-card-body .uk-button-primary, .uk-card-secondary > :not([class*='uk-card-media']) .uk-button-primary, .uk-overlay-primary .uk-button-primary, .uk-offcanvas-bar .uk-button-primary {
-    background-color: #E91E63;
+    background-color: tomato;
     color: #fff; }
   .uk-light .uk-button-default, .uk-section-primary:not(.uk-preserve-color) .uk-button-default, .uk-section-secondary:not(.uk-preserve-color) .uk-button-default, .uk-tile-primary:not(.uk-preserve-color) .uk-button-default, .uk-tile-secondary:not(.uk-preserve-color) .uk-button-default, .uk-card-primary.uk-card-body .uk-button-default, .uk-card-primary > :not([class*='uk-card-media']) .uk-button-default, .uk-card-secondary.uk-card-body .uk-button-default, .uk-card-secondary > :not([class*='uk-card-media']) .uk-button-default, .uk-overlay-primary .uk-button-default, .uk-offcanvas-bar .uk-button-default, .uk-light button, .uk-section-primary:not(.uk-preserve-color) button, .uk-section-secondary:not(.uk-preserve-color) button, .uk-tile-primary:not(.uk-preserve-color) button, .uk-tile-secondary:not(.uk-preserve-color) button, .uk-card-primary.uk-card-body button, .uk-card-primary > :not([class*='uk-card-media']) button, .uk-card-secondary.uk-card-body button, .uk-card-secondary > :not([class*='uk-card-media']) button, .uk-overlay-primary button, .uk-offcanvas-bar button, .uk-light
   input[type="button"], .uk-section-primary:not(.uk-preserve-color)

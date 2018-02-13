@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import placeDefault from './images/default.jpg';
 import Inputs from './components/inputs'
 
 
@@ -30,7 +31,7 @@ class App extends Component {
     this.setState({ inputType: input })
   }
 
-  addType
+
 
 
 
@@ -40,7 +41,7 @@ class App extends Component {
         <header className="uk-padding-small">
           <div className="uk-container uk-flex uk-flex-between">
             <h3 className="logo uk-text-uppercase">skyplaces</h3>
-            <a href uk-icon="icon: heart; ratio: 2" />
+            <a href data-uk-icon="icon: heart; ratio: 2" />
           </div>
         </header>
         <div className="uk-container uk-container-small uk-align-center uk-padding-large">
@@ -50,10 +51,165 @@ class App extends Component {
 
         </div>
       </section>
-      <section className="restaurantsgrid">
-        <div className="uk-container uk-block">
-          <div className="uk-grid-width-1-3@m" uk-grid />
+
+
+      <section className="places-grid">
+        <div className="uk-container">
+          <h1 className="section-title uk-margin-large-top uk-text-center uk-text-uppercase">Restaurants
+            around you</h1>
+          <div className="uk-flex uk-flex-center uk-margin-large">
+            <div className="uk-button uk-button-primary">Show Only Open Places</div>
+          </div>
+
+          <div className=" uk-grid-large uk-child-width-1-3@m"
+               data-uk-grid-parallax>
+            <div className="item   uk-inline-clip uk-transition-toggle ">
+              <div className="uk-panel uk-inline-clip uk-transition-toggle">
+                <img src={placeDefault}
+                     className="uk-transition-scale-up uk-transition-opaque"/>
+                <div className="uk-overlay uk-overlay-primary uk-transition-slide-top uk-text-center uk-position-cover uk-light">
+                  <div className="uk-margin-remove uk-position-center uk-padding">
+                    <h3 className="place-name uk-text-uppercase">
+                      Restaurant name
+                    </h3>
+                    <p className="rating">Rating: 4.5</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+            <div className="item   uk-inline-clip uk-transition-toggle">
+              <div className="uk-panel  uk-inline-clip uk-transition-toggle">
+                <img src={placeDefault}
+                     className="uk-transition-scale-up uk-transition-opaque"/>
+                <div className="uk-overlay uk-overlay-primary uk-transition-slide-top uk-text-center uk-position-cover uk-light">
+                  <div className="uk-margin-remove uk-position-center uk-padding">
+                    <h3 className="place-name uk-text-uppercase">
+                      Restaurant name
+                    </h3>
+                    <p className="rating">Rating: 4.5</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+            <div className="item  uk-inline-clip uk-transition-toggle">
+              <div className="uk-panel uk-inline-clip uk-transition-toggle">
+                <img src={placeDefault}
+                     className="uk-transition-scale-up uk-transition-opaque"/>
+                <div className="uk-overlay uk-overlay-primary uk-transition-slide-top uk-text-center uk-position-cover uk-light">
+                  <div className="uk-margin-remove uk-position-center uk-padding">
+                    <h3 className="place-name uk-text-uppercase">
+                      Restaurant name
+                    </h3>
+                    <p className="rating">Rating: 4.5</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+            <div className="item  uk-inline-clip uk-transition-toggle">
+              <div className="uk-panel uk-inline-clip uk-transition-toggle">
+                <img src={placeDefault}
+                     className="uk-transition-scale-up uk-transition-opaque"/>
+                <div className="uk-overlay uk-overlay-primary uk-transition-slide-top uk-text-center uk-position-cover uk-light">
+                  <div className="uk-margin-remove uk-position-center uk-padding">
+                    <h3 className="place-name uk-text-uppercase">
+                      Restaurant name
+                    </h3>
+                    <p className="rating">Rating: 4.5</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+            <div className="item  uk-inline-clip uk-transition-toggle">
+              <div className="uk-panel uk-inline-clip uk-transition-toggle">
+                <img src={placeDefault}
+                     className="uk-transition-scale-up uk-transition-opaque"/>
+                <div className="uk-overlay uk-overlay-primary uk-transition-slide-top uk-text-center uk-position-cover uk-light">
+                  <div className="uk-margin-remove uk-position-center uk-padding">
+                    <h3 className="place-name uk-text-uppercase">
+                      Restaurant name
+                    </h3>
+                    <p className="rating">Rating: 4.5</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+            <div className="item  uk-inline-clip uk-transition-toggle">
+              <div className="uk-panel uk-inline-clip uk-transition-toggle">
+                <img src={placeDefault}
+                     className="uk-transition-scale-up uk-transition-opaque"/>
+                <div className="uk-overlay uk-overlay-primary uk-transition-slide-top uk-text-center uk-position-cover uk-light">
+                  <div className="uk-margin-remove uk-position-center uk-padding">
+                    <h3 className="place-name uk-text-uppercase">
+                      Restaurant name
+                    </h3>
+                    <p className="rating">Rating: 4.5</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+            <div className="item  uk-inline-clip uk-transition-toggle">
+              <div className="uk-panel uk-inline-clip uk-transition-toggle">
+                <img src={placeDefault}
+                     className="uk-transition-scale-up uk-transition-opaque"/>
+                <div className="uk-overlay uk-overlay-primary uk-transition-slide-top uk-text-center uk-position-cover uk-light">
+                  <div className="uk-margin-remove uk-position-center uk-padding">
+                    <h3 className="place-name uk-text-uppercase">
+                      Restaurant name
+                    </h3>
+                    <p className="rating">Rating: 4.5</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+            <div className="item  uk-inline-clip uk-transition-toggle">
+              <div className="uk-panel uk-inline-clip uk-transition-toggle">
+                <img src={placeDefault}
+                     className="uk-transition-scale-up uk-transition-opaque"/>
+                <div className="uk-overlay uk-overlay-primary uk-transition-slide-top uk-text-center uk-position-cover uk-light">
+                  <div className="uk-margin-remove uk-position-center uk-padding">
+                    <h3 className="place-name uk-text-uppercase">
+                      Restaurant name
+                    </h3>
+                    <p className="rating">Rating: 4.5</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+            <div className="item  uk-inline-clip uk-transition-toggle">
+              <div className="uk-panel uk-inline-clip uk-transition-toggle">
+                <img src={placeDefault}
+                     className="uk-transition-scale-up uk-transition-opaque"/>
+                <div className="uk-overlay uk-overlay-primary uk-transition-slide-top uk-text-center uk-position-cover uk-light">
+                  <div className="uk-margin-remove uk-position-center uk-padding">
+                    <h3 className="place-name uk-text-uppercase">
+                      Restaurant name
+                    </h3>
+                    <p className="rating">Rating: 4.5</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
+
       </section>
     </div>;
   }
