@@ -10,7 +10,6 @@ class GridPlaces extends Component{
     }
     showPlacesDetails = (id) => {
         this.setState({placeId: id})
-
     }
     render(){
         return (
