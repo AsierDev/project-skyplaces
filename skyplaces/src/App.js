@@ -4,8 +4,10 @@ import './App.css';
 
 import Inputs from './components/inputs'
 import GridPlaces from './components/GridPlaces'
+
 import ModalPlace from './components/ModalPlace'
 import Favorites from './components/Favorites'
+
 
 
 
@@ -101,7 +103,7 @@ class App extends Component {
 
             </section>
 
-            <ModalPlace />
+
 
 
 
