@@ -1,21 +1,12 @@
 import React, { Component } from 'react'
 
 function Favorites(props) {
-
-    return (
-        <div>
-        <h1> Hola Favs! </h1>
-        </div>
-    )
     
-}    
-    export default Favorites    
-
-
-
-     {/* <div className="uk-child-width-1-3@m"
+    console.log(props)
+    return (
+        <div className="uk-child-width-1-3@m"
             data-uk-grid-parallax>
-            {this.props.favorites.map(fav => <div className="item uk-inline-clip uk-transition-toggle "
+            {props.favorites.map(fav => <div className="item uk-inline-clip uk-transition-toggle "
                 key={fav.place_id}
             >
                 <div className="uk-panel uk-inline-clip uk-transition-toggle">
@@ -44,4 +35,11 @@ function Favorites(props) {
             </div>
             )}
 
-        </div> */}
+        </div> 
+    )
+    
+}    
+    export default Favorites    
+
+
+

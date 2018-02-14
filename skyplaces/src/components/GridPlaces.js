@@ -7,11 +7,16 @@ class GridPlaces extends Component {
         super(props)
         this.state = {
             placeId: '',
-            modalClass: ''
+            placeFav: false
 
         }
     }
 
+    sendFavorite = fav => {
+        this.props.onClickFav(fav)
+        console.log(this.props)
+        // this.state.placeId
+    }
 
     selectPlace = placeId => {
         this.setState({
@@ -44,6 +49,7 @@ class GridPlaces extends Component {
                                             {place.name}
                                         </h3>
                                         <h5 className="place-address">{place.formatted_address}</h5>
+                                        <a href data-uk-icon="icon: heart" onClick={e => {e.preventDefault(); this.sendFavorite(place)}}/>
                                         <p className="rating">rating:{place.rating}</p>
                                         <button className="uk-button uk-button-secondary uk-button-small uk-text-center"
                                                 type="button"

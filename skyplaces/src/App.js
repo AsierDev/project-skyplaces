@@ -18,7 +18,7 @@ class App extends Component {
             inputType: '',
             inputLocation: '',
             places: [],
-            favorites: ["Casa Pepe", "La Tasca de Paco"]
+            favorites: []
         }
     }
 
@@ -44,6 +44,14 @@ class App extends Component {
 
     }
 
+    addFav = fav => {
+        this.setState(prevState => {
+            return {
+                favorites: [...prevState.favorites, fav]
+            }
+        })
+    }
+
 
 
 
@@ -62,8 +70,6 @@ class App extends Component {
                             <Link to="/fav"><a href
                                 data-uk-icon="icon: heart; ratio: 2" /></Link>
                         </Router>
-
-                            {/* <Favorites /> */}
                         
 
                     </div>
@@ -71,16 +77,19 @@ class App extends Component {
                 <div className="uk-container uk-container-small uk-align-center uk-padding-large">
                     <h1 className="uk-text-center">Busca Restaurantes</h1>
 
-                    <Inputs onSubmitLocation={this.addLocation}
-                        onSubmitType={this.addType}
-                        onSearchPlaces={this.searchPlaces} />
+                    <Router>
+                        <Route  path="/" render={() =>
+                        <Inputs onSubmitLocation={this.addLocation}
+                            onSubmitType={this.addType}
+                                onSearchPlaces={this.searchPlaces} />} />
+ 
+ 
+                    </Router>
+                       
 
                 </div>
             </section>
 
-           {/*  <Router>
-                <Route exact path="/" component={GridPlaces} />
-            </Router>  */}
 
             <section className="places-grid">
                 <div className="uk-container">
@@ -90,11 +99,15 @@ class App extends Component {
                         <div className="uk-button uk-button-primary">Show Only Open Places</div>
                     </div>
                     <Router>
-                        <Route path="/fav" component={Favorites} />
+                        <Route path="/fav" render={() => 
+                        <Favorites favorites={this.state.favorites}/>}/>
                     </Router>
     
 
-                     <GridPlaces places={this.state.places} /> 
+                    <Router>
+                        <Route exact path="/" render={() =>
+                            <GridPlaces places={this.state.places} onClickFav={this.addFav} />} />
+                    </Router>
 
 
 
