@@ -36,6 +36,7 @@ class GridPlaces extends Component{
                                     </button>
                                 </div>
 
+
                             </div>
 
                         </div>
