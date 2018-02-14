@@ -3,6 +3,7 @@ import './App.css';
 
 import Inputs from './components/inputs'
 import GridPlaces from './components/GridPlaces'
+import ModalPlace from './components/ModalPlace'
 
 
 class App extends Component {
@@ -39,6 +40,8 @@ class App extends Component {
     }
 
 
+
+
     render() {
         return <div>
             <section className="hero uk-light">
@@ -68,12 +71,18 @@ class App extends Component {
                         <div className="uk-button uk-button-primary">Show Only Open Places</div>
                     </div>
 
-                        <GridPlaces places = {this.state.places} />
+                        <GridPlaces places = {this.state.places}/>
+
 
                 </div>
 
             </section>
-        </div>;
+
+            <ModalPlace/>
+
+
+
+        </div>
     }
 }
 
