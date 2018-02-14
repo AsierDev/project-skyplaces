@@ -9971,4 +9971,10 @@ ___________________________________________*/
     color: tomato; }
     .hero .uk-icon:hover {
       color: red; }
+
+.uk-modal.uk-open {
+  display: block; }
+
+.uk-modal-title {
+  margin: 0; }
 /*# sourceMappingURL=styles.css.map */
