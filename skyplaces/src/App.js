@@ -3,7 +3,7 @@ import './App.css';
 
 import Inputs from './components/inputs'
 import GridPlaces from './components/GridPlaces'
-import ModalPlace from './components/ModalPlace'
+
 
 
 class App extends Component {
@@ -77,7 +77,7 @@ class App extends Component {
 
             </section>
 
-            <ModalPlace/>
+
 
 
 
