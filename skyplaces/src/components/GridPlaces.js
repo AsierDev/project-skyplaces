@@ -12,6 +12,7 @@ class GridPlaces extends Component {
         }
     }
 
+
     selectPlace = placeId => {
         this.setState({
             placeId
@@ -23,6 +24,7 @@ class GridPlaces extends Component {
         this.setState({
             placeId:''
         })
+
 
     }
 
