@@ -61,7 +61,11 @@ class App extends Component {
     }
 
     searchPlaces = (query) => {
-        placesApi.search(query) // eslint-disable-line
+
+        if(this.state.inputLocation) this.setState({lat:'',long:''})
+        const lat = this.state.lat
+        const long = this.state.long
+        placesApi.search(query, {lat,long})// eslint-disable-line
             .then(places => this.setState({ places: places }))
 
     }
