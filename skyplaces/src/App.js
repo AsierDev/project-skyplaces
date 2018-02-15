@@ -12,6 +12,7 @@ import Favorites from './components/Favorites'
 
 
 
+
 class App extends Component {
     constructor() {
         super()
@@ -134,6 +135,7 @@ class App extends Component {
                 </div>
 
             </section>
+
             <ul className={this.state.spinner}>
                 <li></li>
                 <li></li>
