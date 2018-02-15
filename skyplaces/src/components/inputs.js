@@ -24,6 +24,7 @@ class Inputs extends Component {
         
     }
 
+
     render() {
         return <form className="uk-grid-small "
                      data-uk-grid

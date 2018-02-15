@@ -11,6 +11,7 @@ import Favorites from './components/Favorites'
 
 
 
+
 class App extends Component {
     constructor() {
         super()
@@ -18,20 +19,41 @@ class App extends Component {
             inputType: '',
             inputLocation: '',
             places: [],
-            favorites: []
+            favorites: [],
+            spinner: 'hidden'
         }
     }
+
+
+
+
 
     componentDidMount() {
         placesApi.init() // eslint-disable-line
             .then(() => {
-                this.setState // TODO switch spinner off
+                this.setState({spinner: 'spinner'})// TODO switch spinner off
+
+                navigator.geolocation.getCurrentPosition((position) => {
+                    const lat = position.coords.latitude
+                    const long = position.coords.longitude
+                    this.setState({lat, long})
+
+
+                    placesApi.search('restaurants', {lat, long})// eslint-disable-line
+                        .then(places => this.setState({ places: places, spinner: 'hidden' }))
+
+                });
+
+
+
             })
             .catch(console.error)
+
     }
 
     addLocation = input => {
-        this.setState({ inputLocation: input })
+        this.setState({ inputLocation: input, currentLocation: '' })
+
     }
 
     addType = input => {
@@ -98,6 +120,12 @@ class App extends Component {
                     <div className="uk-flex uk-flex-center uk-margin-large">
                         <div className="uk-button uk-button-primary">Show Only Open Places</div>
                     </div>
+                    <ul className={this.state.spinner}>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                     <Router>
                         <Route path="/fav" render={() => 
                         <Favorites favorites={this.state.favorites}/>}/>
