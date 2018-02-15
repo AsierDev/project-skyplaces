@@ -71,11 +71,12 @@ class App extends Component {
     }
 
     addFav = fav => {
-        this.setState(prevState => {
-            return {
-                favorites: [...prevState.favorites, fav]
-            }
-        })
+        if (!(this.state.favorites).includes(fav))
+            this.setState(prevState => {
+                return {
+                    favorites: [...prevState.favorites, fav]
+                }
+            })
     }
 
 
