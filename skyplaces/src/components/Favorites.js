@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import DefaultImg from '../images/defaultImg.jpg'
 import ModalPlace from './ModalPlace'
+import { HashRouter as Router, Route, Link } from "react-router-dom";
+
 
 class Favorites extends Component {
     constructor(props) {
@@ -21,9 +23,9 @@ class Favorites extends Component {
         this.setState({
             placeId: ''
         })
-
-
     }
+
+    
     
     render() {
         
@@ -31,7 +33,9 @@ class Favorites extends Component {
             <div>
                 <h2 className="section-title uk-margin-large-top uk-text-center uk-text-uppercase">Saved Restaurants</h2>
                 <div className="uk-flex uk-flex-center uk-margin-large">
-                    <div className="uk-button uk-button-primary">Go Back</div>
+                    <Router>
+                        <Link to="/"><div className="uk-button uk-button-primary" >Go Back</div></Link>
+                    </Router>    
                 </div> 
             <div className="uk-child-width-1-3@m"
                 data-uk-grid-parallax>
