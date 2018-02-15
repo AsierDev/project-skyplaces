@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import ModalPlace from './ModalPlace'
-// import UIkit from '../../public/vendor/uikit/js/uikit'
+import DefaultImg from '../images/defaultImg.jpg'
+
 
 class GridPlaces extends Component {
     constructor(props) {
         super(props)
         this.state = {
             placeId: '',
-            placeFav: false
 
         }
     }
@@ -42,7 +42,7 @@ class GridPlaces extends Component {
                                                          key={place.place_id}
                         >
                             <div className="uk-panel uk-inline-clip uk-transition-toggle">
-                                <img src={place.photos[0].getUrl({maxWidth: 800, maxHeight: 800})}/>
+                                <img src={place.photos ? place.photos[0].getUrl({maxWidth: 800, maxHeight: 800}): DefaultImg}/>
                                 <div className="uk-overlay uk-overlay-primary uk-transition-slide-top uk-text-center uk-position-cover uk-light">
                                     <div className="uk-margin-remove uk-position-center uk-padding">
                                         <h3 className="place-name uk-text-uppercase">
