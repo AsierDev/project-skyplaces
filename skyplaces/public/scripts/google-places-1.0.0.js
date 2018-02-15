@@ -9,31 +9,9 @@ let placesApi;
 (() => {
   'use strict';
 
-  let places
-  let details
-
-  const init = () => {
-    return new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-
-      script.onload = () => {
-        places = new google.maps.places.PlacesService(document.createElement('div'))
-
-        resolve()
-      }
-      script.onerror = reject
-
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${inst.key}&libraries=places` // &callback=initMap
-
-      document.head.appendChild(script)
-    })
-  }
+  const places = new google.maps.places.PlacesService(document.createElement('div'))
 
   const inst = {
-    key: 'AIzaSyChp6OnyYbZ2HKZSskxFqdzJC1drMGPzVQ',
-
-    init,
-
     /**
      * Searches places by query.
      * 
@@ -43,17 +21,17 @@ let placesApi;
      * @returns {Promise} - A promise that resolves if API call succeeds, otherwise rejects.
      */
     search: (query, location) => new Promise((resolve, reject) => {
-      const request = {query, rankby: 'distance'}
-      if(location) request.location = new google.maps.LatLng(location.lat,location.long);
-            places.textSearch(request, (results, status) =>
-                status === google.maps.places.PlacesServiceStatus.OK ? resolve(results) : reject(Error(`places returned status ${status}`))
-            )
-        }
+      const request = { query, rankby: 'distance' }
+      if (location) request.location = new google.maps.LatLng(location.lat, location.long);
+      places.textSearch(request, (results, status) =>
+        status === google.maps.places.PlacesServiceStatus.OK ? resolve(results) : reject(Error(`places returned status ${status}`))
+      )
+    }
     ),
     getDetails: placeId => new Promise((resolve, reject) =>
       places.getDetails({ placeId }, (results, status) =>
         status === google.maps.places.PlacesServiceStatus.OK ? resolve(results) : reject(Error(`places returned status ${status}`))
-    ))
+      ))
 
 
   }
