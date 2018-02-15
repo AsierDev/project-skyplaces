@@ -14,8 +14,6 @@ class GridPlaces extends Component {
 
     sendFavorite = fav => {
         this.props.onClickFav(fav)
-        console.log(this.props)
-        // this.state.placeId
     }
 
     selectPlace = placeId => {
