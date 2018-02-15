@@ -78,7 +78,7 @@ class App extends Component {
                     <h1 className="uk-text-center">Busca Restaurantes</h1>
 
                     <Router>
-                        <Route  path="/" render={() =>
+                        <Route  exact path="/" render={() =>
                         <Inputs onSubmitLocation={this.addLocation}
                             onSubmitType={this.addType}
                                 onSearchPlaces={this.searchPlaces} />} />
@@ -93,11 +93,11 @@ class App extends Component {
 
             <section className="places-grid">
                 <div className="uk-container">
-                    <h1 className="section-title uk-margin-large-top uk-text-center uk-text-uppercase">Restaurants
+                    {/* <h1 className="section-title uk-margin-large-top uk-text-center uk-text-uppercase">Restaurants
                         around you</h1>
                     <div className="uk-flex uk-flex-center uk-margin-large">
                         <div className="uk-button uk-button-primary">Show Only Open Places</div>
-                    </div>
+                    </div> */}
                     <Router>
                         <Route path="/fav" render={() => 
                         <Favorites favorites={this.state.favorites}/>}/>

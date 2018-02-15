@@ -36,6 +36,11 @@ class GridPlaces extends Component {
     render() {
         return (
             <div>
+                <h1 className="section-title uk-margin-large-top uk-text-center uk-text-uppercase">Restaurants
+                        around you</h1>
+                <div className="uk-flex uk-flex-center uk-margin-large">
+                    <div className="uk-button uk-button-primary">Show Only Open Places</div>
+                </div>
                 <div className="uk-child-width-1-3@m"
                      data-uk-grid-parallax>
                     {this.props.places.map(place => <div className="item uk-inline-clip uk-transition-toggle "
