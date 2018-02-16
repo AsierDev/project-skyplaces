@@ -2,6 +2,8 @@
 
 Encuentra tu restaurante favorito por tipo de comida en cualquier ciudad.
 
+[skyplaces](https://skyplaces.surge.sh/#/)
+
 ## Getting Started
 
 Puedes descargar o clonar este repositorio para testearlo.
@@ -24,7 +26,6 @@ La app consiste de un buscador donde puedes seleccionar el tipo de restaurante q
 
 Cuando seleccionas un restaurante se abrira un modal con la ficha del lugar (fotos, dirección, horarios, etc) 
 
-(TO DO IMAGEN)
 
 Si nos da tiempo tenemos pensado implementar distintas opciones de filtrado en la busqueda (mostrar solo restaurantes abiertos ahora) y añadir lugares a favoritos.
 
@@ -32,7 +33,9 @@ Si nos da tiempo tenemos pensado implementar distintas opciones de filtrado en l
 
 ## Deployment
 
-Puedes ver una demo en surge (TBD)
+Puedes ver una demo en surge
+
+[skyplaces](https://skyplaces.surge.sh/#/)
 
 [Link a Trello](https://trello.com/b/LgrI7H4j/team-planning)
 
