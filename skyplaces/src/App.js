@@ -27,12 +27,14 @@ class App extends Component {
     }
 
     addFav = fav => {
-        if (!(this.state.favorites).includes(fav))
+        if (!(this.state.favorites).some(favorite=>favorite.id===fav.id)){
+
             this.setState(prevState => {
                 return {
                     favorites: [...prevState.favorites, fav]
                 }
             })
+        }
     }
 
     render() {

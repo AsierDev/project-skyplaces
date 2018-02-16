@@ -45,7 +45,8 @@ class GridPlaces extends Component {
 
     sendFavorite = fav => {
         this.props.onClickFav(fav)
-        console.log(this.props)
+     
+     
     }
 
     selectPlace = placeId => {
@@ -74,7 +75,7 @@ class GridPlaces extends Component {
 
         return (
             <div>
-                <h1 className="section-title uk-margin-large-top uk-text-center uk-text-uppercase">{this.props.match.params.cuisine} {this.props.match.params.location}</h1>
+                <h1 className="section-title uk-margin-large-top uk-text-center uk-text-uppercase">{this.props.match.params.cuisine} {this.props.match.params.location} </h1>
                 
                 <div className="uk-child-width-1-3@m"
                     data-uk-grid-parallax>
