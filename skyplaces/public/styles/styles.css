@@ -9992,4 +9992,29 @@ ___________________________________________*/
   background: rgba(0, 0, 0, 0.4); }
   .hero-modal-content .uk-modal-title {
     font-size: 36px; }
+  .hero-modal-content .uk-icon:visited {
+    color: red; }
+
+.places-grid img {
+  max-height: 200px; }
+
+html {
+  background: #f5f5f5; }
+
+.close-icon {
+  padding: 5px;
+  background: tomato;
+  border-radius: 100%;
+  margin: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+  .close-icon:hover {
+    background: #2D3047; }
+
+.open-close {
+  margin: 20px;
+  cursor: pointer; }
+
+.google-button:hover {
+  background: #2D3047; }
 /*# sourceMappingURL=styles.css.map */

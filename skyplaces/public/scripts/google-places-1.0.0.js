@@ -43,8 +43,8 @@ let placesApi;
      * @returns {Promise} - A promise that resolves if API call succeeds, otherwise rejects.
      */
     search: (query, location) => new Promise((resolve, reject) => {
-      const request = {query, radius: 1000}
-      if(location) request.location = new google.maps.LatLng(location.lat,location.long);
+            const request = {query, rankby: 'distance'}
+            if(location) request.location = new google.maps.LatLng(location.lat,location.long);
             places.textSearch(request, (results, status) =>
                 status === google.maps.places.PlacesServiceStatus.OK ? resolve(results) : reject(Error(`places returned status ${status}`))
             )

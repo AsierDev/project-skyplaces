@@ -7,6 +7,7 @@ import GridPlaces from './components/GridPlaces'
 
 import ModalPlace from './components/ModalPlace'
 import Favorites from './components/Favorites'
+import OpenPlacesButton from './components/OpenPlacesButton'
 
 
 
@@ -62,7 +63,11 @@ class App extends Component {
     }
 
     searchPlaces = (query) => {
-        placesApi.search(query) // eslint-disable-line
+
+        if(this.state.inputLocation) this.setState({lat:'',long:''})
+        const lat = this.state.lat
+        const long = this.state.long
+        placesApi.search(query, {lat,long})// eslint-disable-line
             .then(places => this.setState({ places: places }))
 
     }
@@ -73,6 +78,12 @@ class App extends Component {
                 favorites: [...prevState.favorites, fav]
             }
         })
+    }
+
+    showOpenPlaces = () =>{
+        this.setState(prevState => ({ places: prevState.places.filter(place => place.openning_hours.open_now)}) )
+
+
     }
 
 
@@ -116,6 +127,8 @@ class App extends Component {
 
             <section className="places-grid">
                 <div className="uk-container">
+
+
 
 
                     <Router>

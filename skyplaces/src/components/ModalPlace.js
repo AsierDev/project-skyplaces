@@ -18,7 +18,7 @@ class ModalPlace extends Component {
         return (
 
             <div>
-                <div className={this.state.placeDetails.name ? 'uk-modal uk-open uk-animation-fade uk-modal-full' : ''}
+                <div className={this.state.placeDetails.name ? 'uk-modal uk-open uk-animation-scale-up uk-modal-full' : ''}
                      data-uk-modal>
                     <div className="uk-modal-dialog  uk-height-viewport">
                         <section className="hero-modal uk-background-cover uk-background-no-repeat uk-light "
@@ -29,11 +29,11 @@ class ModalPlace extends Component {
                                      }) : 'default/image'})`,
                                      // height: "600px"
                                  }}
-                        >{this.state.placeDetails.opening_hours ? <div className="open-close uk-align-left">
+                        >{this.state.placeDetails.opening_hours ? <div className="uk-button uk-button-primary uk-margin open-close uk-position-top-left">
                             {this.state.placeDetails.opening_hours.open_now ? 'Abierto ahora' : 'Cerrado de momento'}
                         </div> : ''}
 
-                            <span className="uk-align-right"
+                            <span className="uk-position-top-right close-icon "
                                   data-uk-icon="close"
                                   onClick={this.props.onCloseModal}/>
                             <div className="uk-container">
@@ -48,7 +48,7 @@ class ModalPlace extends Component {
                                     {this.state.placeDetails.formatted_address ?
                                         <h3 className="address">{this.state.placeDetails.formatted_address}</h3> : '' }
                                     {this.state.placeDetails.url ?
-                                        <a className="uk-button uk-button-small uk-button-primary"
+                                        <a className="uk-button uk-button-small uk-button-primary google-button"
                                            href={this.state.placeDetails.url}
                                            target="_blank">Ir a google maps</a> : ''}
 
@@ -77,7 +77,7 @@ class ModalPlace extends Component {
                             <div className="uk-child-width-1-3@m" data-uk-grid>
                                 {this.state.placeDetails.photos ? this.state.placeDetails.photos.map(pic => {
                                    return  <div>
-                                        <div className="uk-card uk-card-default uk-card-body">
+                                        <div className="">
                                             <img src={pic.getUrl({maxWidth: 800, maxHeight: 800})}
                                                  alt=""/>
 
