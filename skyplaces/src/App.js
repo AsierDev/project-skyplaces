@@ -43,7 +43,7 @@ class App extends Component {
 
                     </div>
                 </section>
-                <AroundButton/>
+                <Link to="/restaurants/around-you"><AroundButton/></Link>
                 <section className="places-grid">
                     <div className="uk-container">
                         <Route path="/fav" render={() =>
