@@ -74,11 +74,8 @@ class GridPlaces extends Component {
 
         return (
             <div>
-                <h1 className="section-title uk-margin-large-top uk-text-center uk-text-uppercase">Restaurants
-                        around you</h1>
-                <div className="uk-flex uk-flex-center uk-margin-large">
-                    <div className="uk-button uk-button-primary">Show Only Open Places</div>
-                </div>
+                <h1 className="section-title uk-margin-large-top uk-text-center uk-text-uppercase">{this.props.match.params.cuisine} {this.props.match.params.location}</h1>
+                
                 <div className="uk-child-width-1-3@m"
                     data-uk-grid-parallax>
                     {this.state.places.map(place => <div className="item uk-inline-clip uk-transition-toggle "
