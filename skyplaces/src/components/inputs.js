@@ -20,11 +20,10 @@ class Inputs extends Component {
 
         this.props.onSubmitLocation(this.state.inputLocation)
         this.props.onSubmitType(this.state.inputType)
-
-
         this.setState({inputLocations: ''})
-
+        
     }
+
 
     render() {
         return <form className="uk-grid-small "

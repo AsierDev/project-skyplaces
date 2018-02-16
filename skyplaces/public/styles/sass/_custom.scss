@@ -1,0 +1,26 @@
+.uk-modal.uk-open{
+  display: block;
+}
+.uk-modal-title{
+  margin: 0;
+}
+
+.uk-background-no-repeat{
+  background-repeat: no-repeat !important;
+}
+.uk-background-cover{
+  background-size:cover !important;
+}
+
+.hero-modal{
+  padding: 100px 0;
+}
+
+
+ .hero-modal-content{
+   padding: 50px 0;
+   background: rgba(0,0,0,.4);
+   .uk-modal-title{
+     font-size:36px;
+   }
+ }

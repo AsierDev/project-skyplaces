@@ -42,15 +42,20 @@ let placesApi;
      * @param {String} query - The text to match in the search.
      * @returns {Promise} - A promise that resolves if API call succeeds, otherwise rejects.
      */
-    search: query => new Promise((resolve, reject) =>
-      places.textSearch({ query }, (results, status) =>
-        status === google.maps.places.PlacesServiceStatus.OK ? resolve(results) : reject(Error(`places returned status ${status}`))
-      )),
-
+    search: (query, location) => new Promise((resolve, reject) => {
+      const request = {query, rankby: 'distance'}
+      if(location) request.location = new google.maps.LatLng(location.lat,location.long);
+            places.textSearch(request, (results, status) =>
+                status === google.maps.places.PlacesServiceStatus.OK ? resolve(results) : reject(Error(`places returned status ${status}`))
+            )
+        }
+    ),
     getDetails: placeId => new Promise((resolve, reject) =>
       places.getDetails({ placeId }, (results, status) =>
         status === google.maps.places.PlacesServiceStatus.OK ? resolve(results) : reject(Error(`places returned status ${status}`))
     ))
+
+
   }
 
   placesApi = inst
