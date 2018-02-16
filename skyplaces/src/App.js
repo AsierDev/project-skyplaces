@@ -18,12 +18,14 @@ class App extends Component {
 
 
     addFav = fav => {
-        if (!(this.state.favorites).includes(fav))
+        if (!(this.state.favorites).some(favorite=>favorite.id===fav.id)){
+
             this.setState(prevState => {
                 return {
                     favorites: [...prevState.favorites, fav]
                 }
             })
+        }
     }
 
     render() {
@@ -43,7 +45,7 @@ class App extends Component {
 
                     </div>
                 </section>
-                <Link to="/restaurants/around-you"><AroundButton/></Link>
+               <AroundButton/>
                 <section className="places-grid">
                     <div className="uk-container">
                         <Route path="/fav" render={() =>
