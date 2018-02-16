@@ -39,15 +39,15 @@ class Inputs extends Component {
                         id="select-food"
                         value={this.state.value}
                         onChange={this.handleChange}>
-                    <option>ver todos los restaurantes</option>
-                    <option value="chino">chino</option>
-                    <option value="tapas">tapas</option>
-                    <option value="thailandes">thailandes</option>
-                    <option value="italiano">italiano</option>
-                    <option value="griego">griego</option>
-                    <option value="japones">japones</option>
-                    <option value="tex-mex">tex-mex</option>
-                    <option value="sushi">sushi</option>
+                    <option value="">ver todos los restaurantes</option>
+                    <option value="Restaurantes chinos">chino</option>
+                    <option value="Lugares de tapeo">tapas</option>
+                    <option value="Restaurantes thailandeses">thailandes</option>
+                    <option value="Restaurantes italianos">italiano</option>
+                    <option value="Restaurantes griegos">griego</option>
+                    <option value="Restaurantes japoneses">japones</option>
+                    <option value="Restaurantes mexicanos">mexicano</option>
+                    <option value="Restaurantes de sushi">sushi</option>
                 </select>
             </div>
 
@@ -59,9 +59,11 @@ class Inputs extends Component {
                        placeholder="Indica ciudad o barrio"
                        onChange={(e) => this.keepInput(e.target.value)}/>
             </div>
+
             <div className="uk-align-center uk-margin-top">
                 <input className="uk-button uk-button-primary" type="submit" value="busca"/>
             </div>
+
         </form>
     }
 
