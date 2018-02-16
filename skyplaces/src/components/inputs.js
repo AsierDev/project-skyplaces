@@ -1,4 +1,5 @@
-import React, {Component} from "react";
+import React, {Component} from "react"
+import { withRouter } from "react-router-dom"
 
 class Inputs extends Component {
     constructor() {
@@ -16,12 +17,10 @@ class Inputs extends Component {
         this.setState({inputType: e.target.value});
     }
 
-    submit = () => {
-
-        this.props.onSubmitLocation(this.state.inputLocation)
-        this.props.onSubmitType(this.state.inputType)
+    submit() {
         this.setState({inputLocations: ''})
-        
+
+        this.props.history.push(`/restaurants/${this.state.inputType}/${this.state.inputLocation}`)
     }
 
 
@@ -29,9 +28,9 @@ class Inputs extends Component {
         return <form className="uk-grid-small "
                      data-uk-grid
                      onSubmit={e => {
-                         e.preventDefault();
+                         e.preventDefault()
+
                          this.submit()
-                         this.props.onSearchPlaces(`restaurants+${this.state.inputType}+${this.state.inputLocation}`)
                      }}>
             <div className="uk-width-1-2@m">
                 <label htmlFor="select-food">Que quieres comer?</label>
@@ -65,4 +64,4 @@ class Inputs extends Component {
 
 }
 
-export default Inputs
+export default withRouter(Inputs)
