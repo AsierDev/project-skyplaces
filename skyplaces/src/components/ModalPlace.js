@@ -28,7 +28,7 @@ class ModalPlace extends Component {
                                          maxWidth: 1200,
                                          maxHeight: 600
                                      }) : {DefaultImg}})`,
-                                     // height: "600px"
+
                                  }}
                         >{this.state.placeDetails.opening_hours ? <div className="uk-button uk-button-primary uk-margin open-close uk-position-top-left">
                             {this.state.placeDetails.opening_hours.open_now ? 'Abierto ahora' : 'Cerrado de momento'}

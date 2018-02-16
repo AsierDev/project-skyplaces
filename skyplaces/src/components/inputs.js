@@ -40,14 +40,14 @@ class Inputs extends Component {
                         value={this.state.value}
                         onChange={this.handleChange}>
                     <option value="">ver todos los restaurantes</option>
-                    <option value="Restaurantes chinos">chino</option>
-                    <option value="Lugares de tapeo">tapas</option>
-                    <option value="Restaurantes thailandeses">thailandes</option>
-                    <option value="Restaurantes italianos">italiano</option>
-                    <option value="Restaurantes griegos">griego</option>
-                    <option value="Restaurantes japoneses">japones</option>
-                    <option value="Restaurantes mexicanos">mexicano</option>
-                    <option value="Restaurantes de sushi">sushi</option>
+                    <option value="chinos">chino</option>
+                    <option value="tapas">tapas</option>
+                    <option value="thailandeses">thailandes</option>
+                    <option value="italianos">italiano</option>
+                    <option value="griegos">griego</option>
+                    <option value="japoneses">japones</option>
+                    <option value="mexicanos">mexicano</option>
+                    <option value="sushi">sushi</option>
                 </select>
             </div>
 

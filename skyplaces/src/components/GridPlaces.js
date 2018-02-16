@@ -3,6 +3,7 @@ import ModalPlace from './ModalPlace'
 import DefaultImg from '../images/defaultImg.jpg'
 
 
+
 class GridPlaces extends Component {
     constructor(props) {
         super(props)
@@ -75,8 +76,7 @@ class GridPlaces extends Component {
 
         return (
             <div>
-
-                <h1 className="section-title uk-margin-large-top uk-text-center uk-text-uppercase">{this.props.match.params.cuisine} {this.props.match.params.location} </h1>
+                <h1 className="section-title uk-margin-large-top uk-text-center uk-text-uppercase">Restaurantes {this.props.match.params.cuisine} {this.props.match.params.location} </h1>
                 
                 <div className="uk-child-width-1-3@m"
                     data-uk-grid-parallax>
@@ -107,7 +107,6 @@ class GridPlaces extends Component {
 
                 </div>
 
-                {/*<ModalPlace placeId = {this.state.placeId} modalClass = {this.state.modalClass} />*/}
 
                 {this.state.placeId ? <ModalPlace placeId={this.state.placeId}
                     onCloseModal={this.closeModal} /> : ''}

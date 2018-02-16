@@ -45,12 +45,12 @@ class App extends Component {
 
                     </div>
                 </section>
-                <Link to="/restaurants/around-you"><AroundButton/></Link>
+                <Link to="/restaurants-around-you"><AroundButton/></Link>
                 <section className="places-grid">
                     <div className="uk-container">
                         <Route path="/fav" render={() =>
                             <Favorites favorites={this.state.favorites} />} />
-                        <Route exact path="/restaurants/around-you" render={(routeProps) => <GridPlaces {...routeProps} onClickFav={this.addFav} />} />
+                        <Route exact path="/restaurants-around-you" render={(routeProps) => <GridPlaces {...routeProps} onClickFav={this.addFav} />} />
                         <Route exact path="/restaurants/:cuisine" render={(routeProps) => <GridPlaces {...routeProps} onClickFav={this.addFav} />} />
                         <Route exact path="/restaurants/:cuisine/:location" render={(routeProps) => <GridPlaces {...routeProps} onClickFav={this.addFav}/>  } />
                     </div>
