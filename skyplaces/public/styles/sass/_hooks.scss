@@ -172,10 +172,10 @@ input[type="submit"],
     color: $white;
   }
   .uk-button-default{
-    border-color: $white;
+border: none !important;
     &:hover{
-      background: $white;
-      color:$black;
+      background: $secondary-color;
+      color:$white;
     }
   }
 }

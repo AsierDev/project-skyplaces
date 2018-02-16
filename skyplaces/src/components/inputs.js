@@ -59,6 +59,9 @@ class Inputs extends Component {
                        placeholder="Indica ciudad o barrio"
                        onChange={(e) => this.keepInput(e.target.value)}/>
             </div>
+            <div className="uk-align-center uk-margin-top">
+                <input className="uk-button uk-button-primary" type="submit" value="busca"/>
+            </div>
         </form>
     }
 

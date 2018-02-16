@@ -9660,7 +9660,7 @@ iframe.uk-cover {
   .button, .uk-overlay-primary
   .button, .uk-offcanvas-bar
   .button {
-    border-color: #fff; }
+    border: none !important; }
     .uk-light .uk-button-default:hover, .uk-section-primary:not(.uk-preserve-color) .uk-button-default:hover, .uk-section-secondary:not(.uk-preserve-color) .uk-button-default:hover, .uk-tile-primary:not(.uk-preserve-color) .uk-button-default:hover, .uk-tile-secondary:not(.uk-preserve-color) .uk-button-default:hover, .uk-card-primary.uk-card-body .uk-button-default:hover, .uk-card-primary > :not([class*='uk-card-media']) .uk-button-default:hover, .uk-card-secondary.uk-card-body .uk-button-default:hover, .uk-card-secondary > :not([class*='uk-card-media']) .uk-button-default:hover, .uk-overlay-primary .uk-button-default:hover, .uk-offcanvas-bar .uk-button-default:hover, .uk-light button:hover, .uk-section-primary:not(.uk-preserve-color) button:hover, .uk-section-secondary:not(.uk-preserve-color) button:hover, .uk-tile-primary:not(.uk-preserve-color) button:hover, .uk-tile-secondary:not(.uk-preserve-color) button:hover, .uk-card-primary.uk-card-body button:hover, .uk-card-primary > :not([class*='uk-card-media']) button:hover, .uk-card-secondary.uk-card-body button:hover, .uk-card-secondary > :not([class*='uk-card-media']) button:hover, .uk-overlay-primary button:hover, .uk-offcanvas-bar button:hover, .uk-light
     input[type="button"]:hover, .uk-section-primary:not(.uk-preserve-color)
     input[type="button"]:hover, .uk-section-secondary:not(.uk-preserve-color)
@@ -9706,8 +9706,8 @@ iframe.uk-cover {
     .button:hover, .uk-overlay-primary
     .button:hover, .uk-offcanvas-bar
     .button:hover {
-      background: #fff;
-      color: #000; }
+      background: #2D3047;
+      color: #fff; }
   .uk-light .uk-grid-divider > :not(.uk-first-column)::before, .uk-section-primary:not(.uk-preserve-color) .uk-grid-divider > :not(.uk-first-column)::before, .uk-section-secondary:not(.uk-preserve-color) .uk-grid-divider > :not(.uk-first-column)::before, .uk-tile-primary:not(.uk-preserve-color) .uk-grid-divider > :not(.uk-first-column)::before, .uk-tile-secondary:not(.uk-preserve-color) .uk-grid-divider > :not(.uk-first-column)::before, .uk-card-primary.uk-card-body .uk-grid-divider > :not(.uk-first-column)::before, .uk-card-primary > :not([class*='uk-card-media']) .uk-grid-divider > :not(.uk-first-column)::before, .uk-card-secondary.uk-card-body .uk-grid-divider > :not(.uk-first-column)::before, .uk-card-secondary > :not([class*='uk-card-media']) .uk-grid-divider > :not(.uk-first-column)::before, .uk-overlay-primary .uk-grid-divider > :not(.uk-first-column)::before, .uk-offcanvas-bar .uk-grid-divider > :not(.uk-first-column)::before {
     border-left-color: rgba(255, 255, 255, 0.2); }
   .uk-light .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before, .uk-section-primary:not(.uk-preserve-color) .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before, .uk-section-secondary:not(.uk-preserve-color) .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before, .uk-tile-primary:not(.uk-preserve-color) .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before, .uk-tile-secondary:not(.uk-preserve-color) .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before, .uk-card-primary.uk-card-body .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before, .uk-card-primary > :not([class*='uk-card-media']) .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before, .uk-card-secondary.uk-card-body .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before, .uk-card-secondary > :not([class*='uk-card-media']) .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before, .uk-overlay-primary .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before, .uk-offcanvas-bar .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before {
@@ -9992,4 +9992,31 @@ ___________________________________________*/
   background: rgba(0, 0, 0, 0.4); }
   .hero-modal-content .uk-modal-title {
     font-size: 36px; }
+  .hero-modal-content .uk-icon:visited {
+    color: red; }
+
+.uk-card-media-top img {
+  max-height: 200px;
+  margin: 0 auto;
+  display: block; }
+
+html {
+  background: #f5f5f5; }
+
+.close-icon {
+  padding: 5px;
+  background: tomato;
+  border-radius: 100%;
+  margin: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+  .close-icon:hover {
+    background: #2D3047; }
+
+.open-close {
+  margin: 20px;
+  cursor: pointer; }
+
+.google-button:hover {
+  background: #2D3047; }
 /*# sourceMappingURL=styles.css.map */

@@ -3,9 +3,8 @@ import { HashRouter, Route, Link } from "react-router-dom"
 import './App.css'
 
 import Inputs from './components/inputs'
+import AroundButton from './components/AroundButton'
 import GridPlaces from './components/GridPlaces'
-
-import ModalPlace from './components/ModalPlace'
 import Favorites from './components/Favorites'
 
 class App extends Component {
@@ -13,18 +12,10 @@ class App extends Component {
         super()
         this.state = {
             favorites: [],
-            spinner: 'hidden'
+
         }
     }
 
-    addLocation = input => {
-        this.setState({ inputLocation: input, currentLocation: '' })
-
-    }
-
-    addType = input => {
-        this.setState({ inputType: input })
-    }
 
     addFav = fav => {
         if (!(this.state.favorites).includes(fav))
@@ -49,8 +40,10 @@ class App extends Component {
                     <div className="uk-container uk-container-small uk-align-center uk-padding-large">
                         <h1 className="uk-text-center">Busca Restaurantes</h1>
                         <Inputs />
+
                     </div>
                 </section>
+                <AroundButton/>
                 <section className="places-grid">
                     <div className="uk-container">
                         <Route path="/fav" render={() =>
