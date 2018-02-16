@@ -17,14 +17,6 @@ class App extends Component {
         }
     }
 
-    componentDidMount() {
-        navigator.geolocation.getCurrentPosition(position => {
-            const lat = position.coords.latitude
-            const long = position.coords.longitude
-            this.setState({ lat, long })
-        })
-    }
-
     addLocation = input => {
         this.setState({ inputLocation: input, currentLocation: '' })
 
@@ -63,15 +55,11 @@ class App extends Component {
                     <div className="uk-container">
                         <Route path="/fav" render={() =>
                             <Favorites favorites={this.state.favorites} />} />
-                        <Route exact path="/restaurants/:cuisine/:location" component={GridPlaces} />
+                        <Route exact path="/restaurants/around-you" render={(routeProps) => <GridPlaces {...routeProps} onClickFav={this.addFav} />} />
+                        <Route exact path="/restaurants/:cuisine" render={(routeProps) => <GridPlaces {...routeProps} onClickFav={this.addFav} />} />
+                        <Route exact path="/restaurants/:cuisine/:location" render={(routeProps) => <GridPlaces {...routeProps} onClickFav={this.addFav}/>  } />
                     </div>
                 </section>
-                <ul className={this.state.spinner}>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
             </div>
         </HashRouter>
     }

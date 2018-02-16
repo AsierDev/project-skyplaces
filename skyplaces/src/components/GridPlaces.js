@@ -9,12 +9,30 @@ class GridPlaces extends Component {
         this.state = {
             placeId: '',
             places: [],
+            spinner: 'spinner'
         }
     }
 
     search(cuisine, location) {
-        placesApi.search(`restaurants ${cuisine} ${location}`, ) // eslint-disable-line
-            .then(places => this.setState({ places: places }))
+        if (cuisine && location)
+            placesApi.search(`restaurants ${cuisine} ${location}`) // eslint-disable-line
+                .then(places => this.setState({ places: places, spinner: 'hidden' }))
+        else if (cuisine && !location) {
+            navigator.geolocation.getCurrentPosition(position => {
+                const lat = position.coords.latitude
+                const long = position.coords.longitude
+
+                placesApi.search(`restaurants ${cuisine}`, { lat, long }) // eslint-disable-line
+                    .then(places => this.setState({ places: places, spinner: 'hidden' }))
+            })            
+        } else 
+            navigator.geolocation.getCurrentPosition(position => {
+                const lat = position.coords.latitude
+                const long = position.coords.longitude
+
+                placesApi.search(`restaurants`, { lat, long }) // eslint-disable-line
+                    .then(places => this.setState({ places: places, spinner: 'hidden' }))
+            })
     }
 
     componentDidMount() {
@@ -27,6 +45,7 @@ class GridPlaces extends Component {
 
     sendFavorite = fav => {
         this.props.onClickFav(fav)
+        console.log(this.props)
     }
 
     selectPlace = placeId => {
@@ -45,6 +64,14 @@ class GridPlaces extends Component {
     }
 
     render() {
+        if (!this.state.places.length)
+            return <ul className={this.state.spinner}>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
         return (
             <div>
                 <h1 className="section-title uk-margin-large-top uk-text-center uk-text-uppercase">Restaurants
