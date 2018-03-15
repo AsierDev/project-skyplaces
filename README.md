@@ -53,11 +53,4 @@ for developing fast and powerful web interfaces.
 * **Asier Pérez** - [AsierDev](https://github.com/AsierDev)
 
 
-## Acknowledgments
-
-* ###  Ayuda en el proyecto 
-
-    * *Manuel Barzi* - [manuelbarzi](https://github.com/manuelbarzi)
-    * *Michel Escolano* - [Micheloncio](https://github.com/Micheloncio)
-    * *Alejandro DZ * - [agandia9](https://github.com/agandia9)
 
